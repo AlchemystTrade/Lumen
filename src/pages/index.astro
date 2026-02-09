@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Home">
+  <header class="header">
+    <h1>Lumen</h1>
+    <p>A quiet, curated video library for families</p>
+    <p style="color: var(--color-text-muted); font-size: 0.9rem;">
+      No algorithms. No recommendations. No autoplay. No comments. No tracking.
+    </p>
+  </header>
+
+  <main>
+    <section>
+      <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem;">
+        Welcome to Lumen, a carefully selected collection of videos for families. 
+        Choose a time of day to discover content suited for that moment.
+      </p>
+
+      <nav class="nav">
+        <a href="/morning/">🌅 Morning</a>
+        <a href="/day/">☀️ Day</a>
+        <a href="/evening/">🌙 Evening</a>
+      </nav>
+    </section>
+  </main>
+</Layout>

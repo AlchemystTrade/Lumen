@@ -1,0 +1,41 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const videos = await getCollection('videos');
+  return videos.map((video) => ({
+    params: { slug: video.slug },
+    props: { video },
+  }));
+}
+
+const { video } = Astro.props;
+const { Content } = await video.render();
+
+// Determine the section for back link
+const section = video.id.split('/')[0];
+const sectionName = section.charAt(0).toUpperCase() + section.slice(1);
+---
+
+<Layout title={video.data.title} description={video.data.description}>
+  <div class="video-container">
+    <a href={`/${section}/`} class="back-link">← Back to {sectionName}</a>
+    
+    <h1>{video.data.title}</h1>
+    
+    <div class="video-embed">
+      <iframe 
+        src={video.data.embedUrl}
+        title={video.data.title}
+        frameborder="0"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <div class="content">
+      <Content />
+    </div>
+  </div>
+</Layout>

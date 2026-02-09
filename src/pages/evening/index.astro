@@ -1,0 +1,36 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const eveningVideos = await getCollection('videos', ({ id }) => {
+  return id.startsWith('evening/');
+});
+---
+
+<Layout title="Evening">
+  <header class="header">
+    <h1>🌙 Evening</h1>
+    <p>Wind down with peaceful evening content</p>
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="/morning/">Morning</a>
+      <a href="/day/">Day</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="video-grid">
+      {eveningVideos.map((video) => (
+        <a href={`/videos/${video.slug}/`} class="video-card">
+          <h3>{video.data.title}</h3>
+          <p>{video.data.description}</p>
+        </a>
+      ))}
+      {eveningVideos.length === 0 && (
+        <p style="grid-column: 1 / -1; text-align: center; color: var(--color-text-muted);">
+          No videos available yet. Check back soon!
+        </p>
+      )}
+    </div>
+  </main>
+</Layout>
