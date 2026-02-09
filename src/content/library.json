@@ -1,0 +1,29 @@
+[
+  {
+    "id": "earth-from-space",
+    "period": "morning",
+    "title": "Earth from Space",
+    "source": "NASA Image and Video Library",
+    "license": "Public Domain",
+    "url": "https://images.nasa.gov/",
+    "note": "Short observational clips suitable for calm morning viewing."
+  },
+  {
+    "id": "human-body-intro",
+    "period": "day",
+    "title": "Introduction to the Human Body",
+    "source": "National Library of Medicine (NIH)",
+    "license": "Public Domain",
+    "url": "https://collections.nlm.nih.gov/",
+    "note": "Educational material explaining basic human anatomy."
+  },
+  {
+    "id": "night-sky",
+    "period": "evening",
+    "title": "The Night Sky",
+    "source": "ESO / ESA",
+    "license": "CC-BY",
+    "url": "https://www.eso.org/public/videos/",
+    "note": "Slow-paced astronomy visuals for evening calm."
+  }
+]

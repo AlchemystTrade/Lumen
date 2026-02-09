@@ -150,6 +150,12 @@ const { title, description = "Lumen - A quiet video library." } = Astro.props;
 			<slot />
 		</main>
 		<footer>
+			<nav style="margin-bottom: 1rem;">
+				<ul class="nav-links" style="font-size: 0.75rem;">
+					<li><a href="/">home</a></li>
+					<li><a href="/sources">sources</a></li>
+				</ul>
+			</nav>
 			<p>Lumen Library &copy; {new Date().getFullYear()}</p>
 		</footer>
 	</body>

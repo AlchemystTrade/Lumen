@@ -20,6 +20,16 @@ Inside of your Astro project, you'll see the following folders and files:
 ```
 
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+# Lumen
+A quiet, non-commercial video library.
+
+## Legal philosophy
+
+Lumen is a non-commercial educational library.
+All materials are selected for long-term accessibility,
+clarity of origin, and legal transparency.
+
+No content is hosted without a verifiable license.
 
 There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
