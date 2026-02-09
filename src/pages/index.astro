@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Lumen — A Quiet Library">
+	<section>
+		<h1>Lumen</h1>
+		<p>
+			Welcome to Lumen. This is a quiet, non-commercial video library designed for focused viewing. 
+			We offer a curated selection of films and recordings, organized by the time of day they are best experienced.
+		</p>
+		<p>
+			There are no algorithms here, no recommendations, and no distractions. Just the content, as it was meant to be seen.
+		</p>
+	</section>
+
+	<section style="margin-top: 4rem;">
+		<h2>Collections</h2>
+		<ul class="video-list">
+			<li class="video-item">
+				<a href="/morning">
+					<span class="title">Morning</span>
+					<span class="meta">Gentle, awakening, and reflective.</span>
+				</a>
+			</li>
+			<li class="video-item">
+				<a href="/day">
+					<span class="title">Day</span>
+					<span class="meta">Bright, active, and engaging.</span>
+				</a>
+			</li>
+			<li class="video-item">
+				<a href="/evening">
+					<span class="title">Evening</span>
+					<span class="meta">Calm, deep, and atmospheric.</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+</BaseLayout>
